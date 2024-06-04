@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "may_cham_cong",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "may_cham_cong"
+	}
+}
