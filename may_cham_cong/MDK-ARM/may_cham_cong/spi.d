@@ -1,0 +1,10 @@
+may_cham_cong\spi.o: ..\Core\Src\spi.c
+may_cham_cong\spi.o: ../Core/Inc/spi.h
+may_cham_cong\spi.o: C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h
+may_cham_cong\spi.o: .\RTE\_may_cham_cong\RTE_Components.h
+may_cham_cong\spi.o: ../Drivers/CMSIS/Include/core_cm3.h
+may_cham_cong\spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+may_cham_cong\spi.o: ../Drivers/CMSIS/Include/cmsis_version.h
+may_cham_cong\spi.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+may_cham_cong\spi.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+may_cham_cong\spi.o: C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h

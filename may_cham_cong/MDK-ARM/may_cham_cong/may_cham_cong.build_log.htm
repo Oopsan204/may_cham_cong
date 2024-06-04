@@ -1,0 +1,175 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: áda Lenovo, ads, LIC=32B1Q-NH6SJ-9UK4U-SM2MZ-C6LJA-Y8QDP
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+D:\may_cham_cong\may_cham_cong\MDK-ARM\may_cham_cong.uvprojx
+Project File Date:  06/04/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'may_cham_cong'
+compiling i2c_lcd.c...
+../Core/Inc/i2c.h(4): error:  #5: cannot open source input file "stm32f10x_i2c.h": No such file or directory
+  #include <stm32f10x_i2c.h>
+..\Core\Src\i2c_lcd.c: 0 warnings, 1 error
+compiling main.c...
+../Core/Inc/i2c.h(4): error:  #5: cannot open source input file "stm32f10x_i2c.h": No such file or directory
+  #include <stm32f10x_i2c.h>
+../Core/Src/main.c: 0 warnings, 1 error
+compiling mfrc522.c...
+..\Core\Src\mfrc522.c(71): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+  	MFRC522_CS_LOW;
+..\Core\Src\mfrc522.c(71): error:  #20: identifier "GPIO_Pin_12" is undefined
+  	MFRC522_CS_LOW;
+..\Core\Src\mfrc522.c(77): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+  	MFRC522_CS_HIGH;
+..\Core\Src\mfrc522.c(83): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+  	MFRC522_CS_LOW;
+..\Core\Src\mfrc522.c(83): error:  #20: identifier "GPIO_Pin_12" is undefined
+  	MFRC522_CS_LOW;
+..\Core\Src\mfrc522.c(88): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+  	MFRC522_CS_HIGH;
+..\Core\Src\mfrc522.c: 4 warnings, 2 errors
+compiling spi.c...
+..\Core\Src\spi.c(6): warning:  #223-D: function "SPI_I2S_SendData" declared implicitly
+  	SPI_I2S_SendData(SPI2, data);
+..\Core\Src\spi.c(7): warning:  #223-D: function "SPI_I2S_GetFlagStatus" declared implicitly
+  	while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_BSY) == SET) {
+..\Core\Src\spi.c(7): error:  #20: identifier "SPI_I2S_FLAG_BSY" is undefined
+  	while (SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_BSY) == SET) {
+..\Core\Src\spi.c(9): warning:  #223-D: function "SPI_I2S_ReceiveData" declared implicitly
+  	return SPI_I2S_ReceiveData(SPI2);
+..\Core\Src\spi.c(14): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+  	GPIO_InitTypeDef gpioInit;
+..\Core\Src\spi.c(15): error:  #20: identifier "SPI_InitTypeDef" is undefined
+  	SPI_InitTypeDef   SPI_InitStructure;
+..\Core\Src\spi.c(17): warning:  #223-D: function "RCC_APB1PeriphClockCmd" declared implicitly
+  	RCC_APB1PeriphClockCmd (RCC_APB1Periph_SPI2, ENABLE);
+..\Core\Src\spi.c(17): error:  #20: identifier "RCC_APB1Periph_SPI2" is undefined
+  	RCC_APB1PeriphClockCmd (RCC_APB1Periph_SPI2, ENABLE);
+..\Core\Src\spi.c(18): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+..\Core\Src\spi.c(18): error:  #20: identifier "RCC_APB2Periph_GPIOB" is undefined
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+..\Core\Src\spi.c(20): error:  #20: identifier "GPIO_Mode_AF_PP" is undefined
+  	gpioInit.GPIO_Mode=GPIO_Mode_AF_PP;
+..\Core\Src\spi.c(21): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+  	gpioInit.GPIO_Speed=GPIO_Speed_50MHz;
+..\Core\Src\spi.c(22): error:  #20: identifier "GPIO_Pin_13" is undefined
+  	gpioInit.GPIO_Pin=GPIO_Pin_13 | GPIO_Pin_15;
+..\Core\Src\spi.c(22): error:  #20: identifier "GPIO_Pin_15" is undefined
+  	gpioInit.GPIO_Pin=GPIO_Pin_13 | GPIO_Pin_15;
+..\Core\Src\spi.c(23): warning:  #223-D: function "GPIO_Init" declared implicitly
+  	GPIO_Init(GPIOB, &gpioInit);
+..\Core\Src\spi.c(25): error:  #20: identifier "GPIO_Mode_IN_FLOATING" is undefined
+  	gpioInit.GPIO_Mode=GPIO_Mode_IN_FLOATING;
+..\Core\Src\spi.c(27): error:  #20: identifier "GPIO_Pin_14" is undefined
+  	gpioInit.GPIO_Pin=GPIO_Pin_14;
+..\Core\Src\spi.c(30): error:  #20: identifier "SPI_Direction_2Lines_FullDuplex" is undefined
+  	SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+..\Core\Src\spi.c(31): error:  #20: identifier "SPI_Mode_Master" is undefined
+  	SPI_InitStructure.SPI_Mode = SPI_Mode_Master;
+..\Core\Src\spi.c(32): error:  #20: identifier "SPI_DataSize_8b" is undefined
+  	SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;
+..\Core\Src\spi.c(33): error:  #20: identifier "SPI_CPOL_Low" is undefined
+  	SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;
+..\Core\Src\spi.c(34): error:  #20: identifier "SPI_CPHA_1Edge" is undefined
+  	SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
+..\Core\Src\spi.c(35): error:  #20: identifier "SPI_NSS_Soft" is undefined
+  	SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
+..\Core\Src\spi.c(36): error:  #20: identifier "SPI_BaudRatePrescaler_16" is undefined
+  	SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_16;
+..\Core\Src\spi.c(37): error:  #20: identifier "SPI_FirstBit_MSB" is undefined
+  	SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
+..\Core\Src\spi.c(39): warning:  #223-D: function "SPI_Init" declared implicitly
+  	SPI_Init(SPI2, &SPI_InitStructure);
+..\Core\Src\spi.c(41): warning:  #223-D: function "SPI_Cmd" declared implicitly
+  	SPI_Cmd(SPI2, ENABLE);
+..\Core\Src\spi.c(46): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+  	GPIO_InitTypeDef gpioInit;
+..\Core\Src\spi.c(48): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+..\Core\Src\spi.c(48): error:  #20: identifier "RCC_APB2Periph_GPIOB" is undefined
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+..\Core\Src\spi.c(49): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+  	gpioInit.GPIO_Mode=GPIO_Mode_Out_PP;
+..\Core\Src\spi.c(50): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+  	gpioInit.GPIO_Speed=GPIO_Speed_50MHz;
+..\Core\Src\spi.c(51): error:  #20: identifier "GPIO_Pin_12" is undefined
+  	gpioInit.GPIO_Pin=GPIO_Pin_12;
+..\Core\Src\spi.c(52): warning:  #223-D: function "GPIO_Init" declared implicitly
+  	GPIO_Init(GPIOB, &gpioInit);
+..\Core\Src\spi.c(53): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+  	MFRC522_CS_HIGH;
+..\Core\Src\spi.c: 11 warnings, 24 errors
+compiling delay.c...
+..\Core\Src\delay.c(5): error:  #20: identifier "TIM_TimeBaseInitTypeDef" is undefined
+  	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+..\Core\Src\delay.c(9): warning:  #223-D: function "RCC_APB1PeriphClockCmd" declared implicitly
+  	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+..\Core\Src\delay.c(9): error:  #20: identifier "RCC_APB1Periph_TIM3" is undefined
+  	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+..\Core\Src\delay.c(15): error:  #20: identifier "TIM_CKD_DIV1" is undefined
+  	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+..\Core\Src\delay.c(16): error:  #20: identifier "TIM_CounterMode_Up" is undefined
+  	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+..\Core\Src\delay.c(18): warning:  #223-D: function "TIM_TimeBaseInit" declared implicitly
+  	TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+..\Core\Src\delay.c(21): warning:  #223-D: function "TIM_Cmd" declared implicitly
+  	TIM_Cmd(TIM3, ENABLE);
+..\Core\Src\delay.c(31): warning:  #223-D: function "TIM_SetCounter" declared implicitly
+  	TIM_SetCounter(TIM3, 0);
+..\Core\Src\delay.c(32): warning:  #223-D: function "TIM_GetCounter" declared implicitly
+  	while(TIM_GetCounter(TIM3) < u32DelayInUs);
+..\Core\Src\delay.c: 5 warnings, 4 errors
+compiling i2c.c...
+..\Core\Src\i2c.c(2): error:  #5: cannot open source input file "stm32f10x_i2c.h": No such file or directory
+  #include <stm32f10x_i2c.h>
+..\Core\Src\i2c.c: 0 warnings, 1 error
+"may_cham_cong\may_cham_cong.axf" - 33 Error(s), 20 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_may_cham_cong
+  C:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
